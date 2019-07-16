@@ -1,0 +1,138 @@
+/*      
+        <div class="slider">
+            <div class="left-arrow">
+                <div class="arrow"><i class="fas fa-angle-left"></i></div>
+            </div>
+            <a href="#" class="imgHolder imgShow"><img class="img" src="IMG/1.png" alt="siema">
+                <div class="captionsHolder">
+                    <h1 class="sliderImgHeading">Witcher 3 Wild Hunt</h1>
+                    <h4 class="sliderImgDesc">Taka dobra gra zze tego tu ja siema stosad sa Lorem ipsum dolor sit
+                        amet,usantium sunt
+                        voluptatem consequuntur eum!</h4>
+                </div>
+            </a>
+            <div class="imgHolder imgHidden"><img class="img" src="Img/2.jpg" alt=""></div>
+            <div class="imgHolder imgHidden"><img class="img" src="Img/3.jpg" alt=""></div>
+
+            <div class="right-arrow">
+                <div class="arrow"><i class="fas fa-angle-right"></i></div>
+            </div>
+
+            <div class="dotHolder">
+
+            </div>
+        </div>
+        */
+
+.slider {
+    position: relative;
+
+    /*proporcje karuzeli*/
+    width: 100%;
+    height: 80%;
+}
+
+.imgHolder {
+    display: block;
+    position: relative;
+}
+
+.imgHolder,
+.img {
+    width: 100%;
+    height: 100%;
+}
+
+.captionsHolder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 1rem;
+    width: 80%;
+    color: white;
+}
+
+.sliderImgDesc,
+.sliderImgHeading {
+    text-align: center;
+    padding: 5px;
+    background: rgba(0, 0, 0, .65);
+}
+
+.sliderImgHeading {
+
+    font-size: 25px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.left-arrow,
+.right-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 3rem;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.right-arrow {
+    right: 0;
+}
+
+.arrow {
+    font-size: 25px;
+    color: var(--light);
+}
+
+.dotHolder {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: -1.5rem;
+    right: 0;
+    /*3rem;*/
+    height: 1.5rem;
+    background: rgba(0, 0, 0, .5);
+}
+
+.dot {
+    background: var(--light);
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.imgShow {
+    animation: imgTransition 1s 1;
+    animation-timing-function: ease-in;
+}
+
+.imgHidden {
+    display: none;
+}
+
+.active {
+    background: var(--third);
+}
+
+
+@keyframes imgTransition {
+    from {
+        opacity: 0.5;
+        filter: blur(10px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}

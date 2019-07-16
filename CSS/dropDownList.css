@@ -1,0 +1,81 @@
+.custom-select {
+    background: var(--light);
+    position: relative;
+    font-size: .9rem;
+    min-width: 70px;
+    z-index: 2;
+
+    /* padding-left: /1rem; */
+    padding-left: 1%;
+    
+}
+
+.custom-select select {
+    display: none;
+}
+
+.select-selected {
+    height: 100%;
+}
+
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 28px;
+    right: 0px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: var(--dark) transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent var(--dark) transparent;
+    top: 22px;
+}
+
+.select-items div,
+.select-selected {
+    display: flex;
+    align-items: center;
+    color: var(--dark);
+    padding: 15px 60px 15px 10px;
+    cursor: pointer;
+    user-select: none;
+
+}
+
+.select-items {
+    position: absolute;
+    background-color: var(--light);
+    width: 100vw;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+@media screen and (min-width: 1200px) {
+
+    .select-selected:after {
+        top: 20px;
+    }
+
+    .select-selected.select-arrow-active:after {
+        top: 15px;
+    }
+
+    .select-items {
+        width: 150px;
+    }
+}

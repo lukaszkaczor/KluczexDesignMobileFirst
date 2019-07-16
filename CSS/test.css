@@ -1,0 +1,17 @@
+.mobile{
+    position: relative;
+    display: block;
+    width: 200vw;
+    height: 200vh;
+    background: red;
+    position: absolute;
+    top: 100px;
+}
+
+.link{
+    border: 1px solid black;
+    font-size: 70px;
+   display: block;
+   /* position: absolute; */
+   /* top: 100px; */
+}
