@@ -24,12 +24,18 @@
         </div>
         */
 
+
+:root {
+    --sliderWidth: 95vw;
+}
+
 .slider {
     position: relative;
-
     /*proporcje karuzeli*/
-    width: 100%;
-    height: 80%;
+    /* width: 100%; */
+    /* width: var(--sliderWidth); */
+    /* height: 80%; */
+
 }
 
 .imgHolder {
@@ -39,8 +45,9 @@
 
 .imgHolder,
 .img {
+    display: block;
     width: 100%;
-    height: 100%;
+    height: calc(var(--sliderWidth) * .57);
 }
 
 .captionsHolder {
@@ -134,5 +141,11 @@
 
     to {
         opacity: 1;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    :root {
+        --sliderWidth: 45vw;
     }
 }
