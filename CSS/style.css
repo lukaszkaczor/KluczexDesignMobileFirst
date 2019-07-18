@@ -115,6 +115,7 @@ body {
     display: block;
     width: 85%;
     height: 100%;
+    /* border: 1px solid blue; */
   }
 
   .dwa {
@@ -122,22 +123,33 @@ body {
     width: 15%;
     height: 100%;
     right: 0;
+    top: 0;
     position: absolute;
     background: var(--third);
+    /* background: red; */
+    /* border: 1px solid blue; */
+    transition: .1s ease;
+
   }
 
   .add {
-    display: inline;
+    display: block;
     position: absolute;
-    width: 745%;
-    height: 13.5%;
     background: var(--third);
     color: var(--light);
     text-decoration: none;
     text-align: center;
-    line-height: 1.9rem;
-    right: -321.5%;
-    top: 43.2%;
+    /* line-height: 1.9rem; */
+    /* line-height: 25px; */
+    /* right: -321.5%; */
+    /* top: 43.2%; */
+    bottom: 0;
+    right: 100%;
+    /* width: auto; */
+
+    transform-origin: bottom right;
     transform: rotate(90deg);
+
   }
+
 }
