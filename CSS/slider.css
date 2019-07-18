@@ -31,11 +31,7 @@
 
 .slider {
     position: relative;
-    /*proporcje karuzeli*/
-    /* width: 100%; */
-    /* width: var(--sliderWidth); */
-    /* height: 80%; */
-
+    width: var(--sliderWidth);
 }
 
 .imgHolder {
